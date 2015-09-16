@@ -1,3 +1,24 @@
+// ==UserScript==
+// @name Office Football Pool Enhanced Standings
+// @version 0.1
+// @namespace http://github.com/ethanhart
+// @description Add some additional features to the Office Football Pool standings page
+// @author Ethan Hart (ethan.john.hart@gmail.com)
+// ==/UserScript==
+
+/*
+Version History
+
+0.1 2015-09-15
+    - Initial Version
+    - Add Average shares
+    - Highlight users shares to indicate +/- relative to mean
+
+*/
+
+var table = document.getElementById("bstandings");
+var tablelen = table.rows.length;
+
 function getIntValue(value) {
     console.log("init val: ")
     console.log(value)
@@ -9,7 +30,6 @@ function getIntValue(value) {
 }
 
 function addAverageRow(mean) {
-    var table = document.getElementById("bstandings");
     for (var i = 0, row; row = table.rows[i]; i++) {
         var cell = row.cells[2]
         var value = getIntValue(cell.innerHTML);
@@ -32,8 +52,6 @@ function addAverageRow(mean) {
 }
 
 function getAverageShares() {
-    var table = document.getElementById("bstandings");
-    var tablelen = table.rows.length;
     var total = [];
     for (var i = 0, row; row = table.rows[i]; i++) {
         var cell = row.cells[2]
