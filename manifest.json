@@ -7,7 +7,7 @@
 
   "content_scripts": [ 
     { "js": [ "js/ofps.js" ],
-      "matches": [ "*://officefootballpool.com/standings*" ],
+      "matches": [ "*://officefootballpool.com/standings*", "*://www.officefootballpool.com/standings*" ],
       "run_at": "document_end" }
   ]
 }
