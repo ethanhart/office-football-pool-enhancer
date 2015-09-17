@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Office Football Pool Enhanced Standings",
   "description": "This extension adds some additional functionality to the Office Football Pool standings page",
-  "version": "0.1",
+  "version": "0.2",
   "icons": { "128": "images/icon128.png" },
 
   "content_scripts": [ 
