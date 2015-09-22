@@ -3,7 +3,9 @@
 
 This Chrome extension adds some addtional features and stats to the Office Football Pool standings page.
 (http://officefootballpool.com/standings.cfm)
- 
+
+Now available on the Chrome Web Store: [Office Football Pool Enhancer](https://chrome.google.com/webstore/detail/office-football-pool-enha/giddgbpfifkedgnlonpcpbhnhbpkdapo)
+
 #Installation:
 -------------------------------------
 
