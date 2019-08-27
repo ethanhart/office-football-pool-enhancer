@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name Office Football Pool Enhanced Standings
-// @version 2.0
+// @version 2.1
 // @namespace http://github.com/ethanhart
 // @description Add some additional features to the Office Football Pool standings page
 // @author Ethan Hart (ethan.john.hart@gmail.com)
@@ -32,8 +32,9 @@ function addAverageRow(mean, meanRisked) {
     th.appendChild(delta_a)  // Add the a element
     //tr.insertBefore(th, tr.children[3]);  // Insert the new header element into the header
     //tr.append(th, tr.children[4]);  // Insert the new header element into the header
-    tr.append(th);  // Insert the new header element into the header
+    tr.append(th);  // Insert the new header element into the header- Needed to add to the end, otherwise Picks would disappear
 
+    // Try and remove some of the "Not active" entries
     for (var i = 0, row; row = table.rows[i]; i++) {
         if (row.cells[2].innerHTML.includes('Not active')){table.deleteRow(i);}
         //if (row.cells[2].textContent.includes('Not active')){table.deleteRow(i);}
@@ -69,15 +70,8 @@ function addAverageRow(mean, meanRisked) {
         //console.log(row.cells)
         if (row.cells[2].innerHTML.includes('Not active')){continue;}
         if (row.cells[2].textContent.includes('Not active')){continue;}
-        if (row.cells.length == 3){
-        table.deleteRow()
-        //row.insertCell(3);
-        //row.insertCell(4);
-        }
-        row.insertCell(4);
-        //if (row.cells[0].innerHTML == '0'){continue;}
-        //if (row.cells[2].innerHTML.includes('Not')){table.deleteRow(i);}
-        //if (row.cells.length == 3){table.deleteRow(i);}
+        if (row.cells.length == 3){table.deleteRow()}  // Indicates a "Not active" row
+        row.insertCell(4);  // Add cell for delta values
         //var new_picks_cell = row.insertCell(4);
         //var orig_picks = row.cells[3].innerHTML;
         //new_picks_cell.innerHTML = orig_picks;
@@ -95,6 +89,8 @@ function addAverageRow(mean, meanRisked) {
             cell_user_delta.style.backgroundColor = "mediumseagreen";
         }
 
+        // Risked value highlighting removed as it only works when viewing
+        // previous years and breaks the current year page
         //var risked_value = getIntValue(cell_user_risked.innerHTML);
         //if (risked_value < meanRisked) {
             //cell_user_risked.style.backgroundColor = "lightcoral";
