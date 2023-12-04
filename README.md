@@ -7,7 +7,7 @@ This Chrome extension adds some addtional features and stats to the Office Footb
 ### Updates
 * 09-22-2015: Available in Chrome Web Store [here](https://chrome.google.com/webstore/detail/office-football-pool-enha/giddgbpfifkedgnlonpcpbhnhbpkdapo?hl=en-US&gl=US)
 * 08-06-2019: New webpage layout required some minor fixes. Also added additional sorting functionality and a few minor visual adjustments/enhancements.
-
+* 12-04-2023: Update Manifest version from 2 -> 3
 
 #### Manual Installation:
 
