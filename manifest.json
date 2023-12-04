@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Office Football Pool Enhancer",
   "description": "This extension adds some additional functionality to Office Football Pool",
-  "version": "2.1",
+  "version": "2.2",
   "icons": { "128": "images/icon128.png" },
 
   "content_scripts": [
